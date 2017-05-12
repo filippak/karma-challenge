@@ -1,0 +1,30 @@
+
+.btn {
+  padding: 14px 24px;
+  display: inline-block;
+  font-size: 20px;
+}
+.btn.outline {
+  background: white;
+  border: 2px solid #D7DADD;
+	color: gray;
+}
+.sort-button {
+  margin-left: 15px;
+  display: inline-block;
+}
+
+.sort-button-clicked {
+  background-color: #D7DADD;
+  color: gray;
+  margin-left: 15px;
+  display: inline-block;
+}
+.btn.solid {
+    background-color:#D7DADD;
+    color: gray;
+}
+
+.btn:focus {
+  outline:0;
+}

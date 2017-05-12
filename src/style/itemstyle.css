@@ -1,0 +1,87 @@
+.itemContainer {
+  position: relative;
+  height: 500px;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: left;
+  border-style: solid;
+  border-width: thin;
+  border-color: lightgray;
+  border-radius: 10px;
+  padding:5px;
+  margin-bottom: 20px;
+}
+.items-container h4{
+  font-family: 'Roboto', sans-serif;
+}
+.items-container p{
+  font-family: georgia;
+}
+.items-container h5{
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+}
+
+.img {
+  height: 100%;
+  width: auto;
+}
+
+.imgContainer {
+  max-height: 200px;
+  min-height: 200px;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  vertical-align: middle;
+  background-size: cover;
+  background: url(https://vignette3.wikia.nocookie.net/lego/images/a/ac/No-Image-Basic.png/revision/latest?cb=20130819001030);
+}
+
+.imgContainer img{
+  position: absolute;
+  max-height: 200px;
+  min-height: 200px;
+  min-width: 97%;
+  max-width: 97%;
+  border-radius: 10px;
+}
+
+
+.filter-row {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.filter-block {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.filter-block.search {
+  display: inline-block;
+  vertical-align: top;
+  width:75%;
+  margin-top: 5px;
+}
+
+.sort-search {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  vertical-align: center;
+}
+
+.logo-icon {
+  max-width: 75px;
+  max-height: auto;
+}
+
+.sort-block {
+  width: 100%;
+  padding-bottom: 30px;
+  padding-left: 60px;
+}
+
+.sort-block button {
+  font-family: 'Roboto', sans-serif;
+}

@@ -1,0 +1,24 @@
+.App {
+}
+
+.panel-header {
+  min-height: 180px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 0px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #FF8B8B;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.panel-header h4 {
+  font-weight: lighter;
+  font-style: italic;
+}
+.panel-header h1 {
+  font-weight: lighter;
+}
