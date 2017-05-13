@@ -10,7 +10,7 @@ import {ItemComponent} from './ItemCoponent'
 import {LocationComponent} from './LocationComponent'
 
 //header panel at top of page
-const HeaderPanel = React.createClass({
+class HeaderPanel extends Component {
   render () {
     return (
       <div className="panel-header">
@@ -21,7 +21,7 @@ const HeaderPanel = React.createClass({
       </div>
     )
   }
-})
+}
 
 class App extends Component {
 
