@@ -12,7 +12,7 @@ import './style/searchstyle.css'
 import logo from './images/logo.png';
 import {SortComponent} from './SortComponent'
 
-const KEYS_FOR_FILTER = ['item.name', 'item.title', 'loc.address', 'item.ingredients']
+const KEYS_FOR_FILTER = ['item.name', 'item.title', 'loc.address', 'loc.name', 'item.ingredients']
 
 export class ItemComponent extends Component {
   constructor(props) {
