@@ -35,6 +35,7 @@ export class ItemComponent extends Component {
       })
     }
 
+    //sorts items by the selected property
     sortBy(field) {
       var sortedItems = this.props.itemsFromParent.sort( (a, b) => {
         if(field === "price") {
@@ -69,14 +70,11 @@ export class ItemComponent extends Component {
     }
 
     componentDidMount () {
-      this.sortBy("location");
     }
 
     render () {
-      console.log(this.props.itemsFromParent);
       const filteredItems = this.props.itemsFromParent.filter(createFilter(this.state.searchTerm, KEYS_FOR_FILTER));
         var allItems = filteredItems.map(function(item, index) {
-              //var pathName = "/item/"+item.item.id;
               var price = item.item.price / 100;
               var distance =(item.dist / 1000).toFixed(1);
            return(

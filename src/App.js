@@ -9,7 +9,7 @@ import './style/App.css';
 import {ItemComponent} from './ItemCoponent'
 import {LocationComponent} from './LocationComponent'
 
-
+//header panel at top of page
 const HeaderPanel = React.createClass({
   render () {
     return (
@@ -30,12 +30,12 @@ class App extends Component {
   this.state = {
     items: [],
     locations: [],
-    locationsLoaded: false
   };
 
   this.getDistance = this.getDistance.bind(this);
 }
 
+//gets distance between "home" and each of the restuarants
 getDistance (location) {
   var lon = location.longitude;
   var lat = location.latitude;
@@ -48,13 +48,10 @@ getDistance (location) {
   var d_lat = (latHome-lat) * Math.PI / 180;
   var d_lon = (lonHome-lon)* Math.PI / 180;
 
-
   var a = Math.sin(d_lat/2) * Math.sin(d_lat/2) + Math.cos(phi_1) * Math.cos(phi_2) * Math.sin(d_lon/2) * Math.sin(d_lon/2);
   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
   //distance in meters
   var d = R * c;
-  // console.log("new distance");
-  // console.log(d);
   return(d);
 }
 
@@ -76,18 +73,12 @@ getDistance (location) {
       var locs = this.getItemsForLoc(response);
       locations = locs;
       this.setState({
-       locations: locs,
-        locationsLoaded: true
+       locations: locs
       });
-      //console.log(this.state.locations);
     });
-
-    // this.setState({
-    //   items: items,
-    //   locations: locations
-    // });
   }
 
+//gets all the items for each of the locations
   getItemsForLoc(locations) {
     var ItemLoc = [];
     locations.map(function(loc, index) {
@@ -102,7 +93,7 @@ getDistance (location) {
     return ItemLoc;
   }
 
-
+//gets the location for each of the items and adds to data structure
   getLocsForItems(itms) {
     var ItemLoc = [];
     var self = this;
@@ -116,24 +107,17 @@ getDistance (location) {
         toPush.dist = distance;
       });
       toPush.item = item;
-    //  self.getDistance(toPush.loc.longitude, toPush.loc.latitude);
-      //toPush.dist = distance;
       ItemLoc.push(toPush);
     });
     return ItemLoc;
   }
 
-  updateStateFromChild(updatedData) {
-    this.setState({
-      items: updatedData
-    });
-  }
 
   render() {
     return (
       <div className="App">
       <HeaderPanel />
-      <ItemComponent updateState={this.updateStateFromChild} itemsFromParent={this.state.items} />
+      <ItemComponent itemsFromParent={this.state.items} />
       </div>
     )
   }
